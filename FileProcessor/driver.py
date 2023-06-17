@@ -1,3 +1,4 @@
+import logging
 import ingest as FPI
 import persist as FPP
 
@@ -10,7 +11,10 @@ class DriverProgram:
 
 
 
-
+logging.debug("this is a debug message")
+logging.info("this is an info message")
+logging.warning("this is a warning message")
+logging.error("this is an error message")
 driver = DriverProgram("csv")
 reader = FPI.FileReader("csv")
 reader.read_file()
