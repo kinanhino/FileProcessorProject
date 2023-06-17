@@ -11,11 +11,8 @@ class DriverProgram:
 
 
 
-
-
-file_type = "csv"
-driver = DriverProgram(file_type)
-reader = FPI.FileReader(file_type)
+driver = DriverProgram("csv")
+reader = FPI.FileReader("csv")
 reader.read_file()
-writer = FPP.PersistData(file_type)
+writer = FPP.PersistData("postgres")
 writer.store_data()

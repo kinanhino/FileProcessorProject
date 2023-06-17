@@ -1,7 +1,7 @@
 class PersistData:
 
-    def __init__(self, file_type):
-        self.file_type = file_type
+    def __init__(self, db_type):
+        self.db_type = db_type
 
     def store_data(self):
-        print(f"Saving a {self.file_type} file")
+        print(f"Storing data to {self.db_type}")
