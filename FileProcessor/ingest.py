@@ -2,8 +2,9 @@ import logging
 class FileReader:
 
     def __init__(self, file_type):
-        logging.basicConfig(level="DEBUG")
+        logging.config.fileConfig("resources/configs/logging.conf")
+        self.logger = logging.getLogger("Ingest")
         self.file_type = file_type
 
     def read_file(self):
-        logging.debug(f"Reading a {self.file_type} file")
+        self.logger.debug(f"Reading a {self.file_type} file")

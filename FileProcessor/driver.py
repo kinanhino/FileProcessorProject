@@ -1,11 +1,11 @@
 import logging
 import ingest as FPI
 import persist as FPP
-
+import logging.config
 
 class DriverProgram:
     def __init__(self, file_type):
-        logging.basicConfig(level="DEBUG")
+        logging.config.fileConfig("resources/configs/logging.conf")
         logging.debug("Starting up the project")
         self.file_type = file_type
 
