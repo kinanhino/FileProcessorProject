@@ -1,0 +1,9 @@
+{
+  "course_name": "New course",
+  "author_name": "Kinan Hino",
+  "course_section": {
+    "section1": "Value1",
+    "section2": "Value2"
+  },
+  "creation_date": "2021-03-20"
+}
