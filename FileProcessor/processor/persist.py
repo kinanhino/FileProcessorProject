@@ -3,6 +3,7 @@ import logging
 import psycopg2
 import json
 
+
 class PersistData:
 
     def __init__(self, db_type):
@@ -78,11 +79,13 @@ class PersistData:
         cursor.execute(select_query)
         # print(cursor.fetchone())
         records = cursor.fetchall()
-        for item in records:
-            print(item)
-            print("Printed a record")
+        # for item in records:
+        #     print(item)
+        #     print("Printed a record")
 
         cursor.close()
 
         connection.commit()
+
+        return records
 

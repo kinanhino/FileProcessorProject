@@ -1,9 +1,9 @@
 {
-  "course_name": "New course",
+  "course_name": "Python for Beginners",
   "author_name": "Kinan Hino",
   "course_section": {
-    "section1": "Value1",
-    "section2": "Value2"
+    "section": 1,
+    "title": "python"
   },
-  "creation_date": "2021-03-20"
+  "creation_date": "2021-04-20"
 }
