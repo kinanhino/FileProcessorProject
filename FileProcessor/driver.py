@@ -1,7 +1,7 @@
+from processor import persist, ingest
 import logging
-import ingest as FPI
-import persist as FPP
 import logging.config
+
 
 class DriverProgram:
     def __init__(self, file_type):
@@ -9,11 +9,14 @@ class DriverProgram:
         logging.debug("Starting up the project")
         self.file_type = file_type
 
+    def my(self):
+        reader = ingest.FileReader(self.file_type)
+        writer = persist.PersistData("postgres")
+        read_json = reader.read_file()
+        print(f"read the json {str(read_json)}")
+        writer.store_data(read_json)
 
 
-
-driver = DriverProgram("csv")
-reader = FPI.FileReader("csv")
-reader.read_file()
-writer = FPP.PersistData("postgres")
-writer.store_data()
+if __name__ == "__main__":
+    driver = DriverProgram("json")
+    driver.my()
